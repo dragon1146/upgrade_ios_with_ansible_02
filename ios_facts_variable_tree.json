@@ -1,0 +1,58 @@
+{
+    "results2": {
+        "ansible_facts": {
+            "ansible_net_all_ipv4_addresses": [], 
+            "ansible_net_all_ipv6_addresses": [], 
+            "ansible_net_api": [], 
+            "ansible_net_config": [],
+            "ansible_net_filesystems": [], 
+            "ansible_net_filesystems_info": {}, 
+            "ansible_net_gather_network_resources": [], 
+            "ansible_net_gather_subset": [], 
+            "ansible_net_hostname": [], 
+            "ansible_net_image": [], 
+            "ansible_net_interfaces": {
+                "FastEthernet0/0": {
+                    "bandwidth": 10000, 
+                    "description": null, 
+                    "duplex": null, 
+                    "ipv4": [], 
+                    "lineprotocol": "up", 
+                    "macaddress": "c201.33dd.0000", 
+                    "mediatype": null, 
+                    "mtu": 1500, 
+                    "operstatus": "up", 
+                    "type": "Gt96k FE"
+                }, 
+                "Serial0/0": {
+                    "bandwidth": 1544, 
+                    "description": null, 
+                    "duplex": null, 
+                    "ipv4": [], 
+                    "lineprotocol": "down", 
+                    "macaddress": null, 
+                    "mediatype": null, 
+                    "mtu": 1500, 
+                    "operstatus": "administratively down", 
+                    "type": null
+                }
+                
+            }, 
+            "ansible_net_iostype": "IOS", 
+            "ansible_net_memfree_mb": 29060.1171875, 
+            "ansible_net_memtotal_mb": 45005.8125, 
+            "ansible_net_model": "3725", 
+            "ansible_net_neighbors": {}, 
+            "ansible_net_python_version": "2.7.17", 
+            "ansible_net_serialnum": "FTX0945W0MY", 
+            "ansible_net_system": "ios", 
+            "ansible_net_version": "12.4(25d)", 
+            "ansible_network_resources": {}
+        }, 
+        "changed": false, 
+        "failed": false, 
+        "warnings": [
+            "default value for `gather_subset` will be changed to `min` from `!config` v2.11 onwards"
+        ]
+    }
+}

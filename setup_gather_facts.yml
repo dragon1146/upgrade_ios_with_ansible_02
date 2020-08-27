@@ -1,0 +1,28 @@
+---
+  - name: Play 1 - get facts about device
+    hosts: r1
+    connection: local
+    gather_facts: no
+
+
+    tasks:
+
+      - name: task 1 - Gather facts on ios devices
+        ios_facts:
+        when: ansible_network_os == 'ios'
+        register: results1
+
+      - name: task 2 - Gather facts eos devices
+        eos_facts:
+        when: ansible_network_os == 'eos'
+        register: results2
+
+      - name: task 3 - print results of task 1
+        debug:
+          var: results1
+
+      - name: task 3 - print results of task 2
+        debug:
+          var: results2["ansible_facts"]["ansible_net_config"]
+
+      

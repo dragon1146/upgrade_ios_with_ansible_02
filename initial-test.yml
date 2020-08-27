@@ -1,0 +1,22 @@
+---
+  - name: Play 1 - test connection to devices
+    hosts: ios-devices
+    connection: local
+    gather_facts: yes
+
+
+    tasks:
+
+      - name: Task 1 - send "show ip int br" command to devices
+        ios_command:
+          commands:
+            - show ip int br
+        
+          provider:
+            username: tison
+            password: cisco12345
+            host: "{{ inventory_hostname }}"
+
+
+
+

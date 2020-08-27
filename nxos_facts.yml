@@ -1,0 +1,15 @@
+---
+  - name: Play 1 gather facts from nx-os
+    hosts: nex1
+    connection: local
+    gather_facts: no
+
+
+    tasks:
+
+      - name: Task 1 - use nx-os module to gather facts
+        nxos_facts:
+          provider:
+            username: tison
+            password: cisco12345
+            host: "{{ inventory_hostname }}"

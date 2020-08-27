@@ -1,0 +1,93 @@
+{
+    "results2": {
+        "ansible_facts": {
+            "ansible_net_all_ipv4_addresses": [
+                "192.168.56.11"
+            ], 
+            "ansible_net_all_ipv6_addresses": [], 
+            "ansible_net_api": "cliconf", 
+            "ansible_net_config": "!\nversion 12.4\nservice timestamps debug datetime msec\nservice timestamps log datetime msec\nno service password-encryption\n!\nhostname r1\n!\nboot-start-marker\nboot-end-marker\n!\nenable secret 5 $1$dysZ$n6ry1Dh9aTxtYgTxAm1z31\n!\nno aaa new-model\nmemory-size iomem 5\nno ip icmp rate-limit unreachable\nip cef\n!\n!\n!\n!\nno ip domain lookup\nip domain name cisco.com\nip auth-proxy max-nodata-conns 3\nip admission max-nodata-conns 3\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\nusername tison privilege 15 secret 5 $1$56Ez$9EkYyz9kb07xmUhJIbHBv0\n!\n!\nip tcp synwait-time 5\n! \n!\n!\n!\n!\ninterface FastEthernet0/0\n ip address 192.168.56.11 255.255.255.0\n duplex auto\n speed auto\n!\ninterface Serial0/0\n no ip address\n shutdown\n clock rate 2000000\n!\ninterface FastEthernet0/1\n no ip address\n shutdown\n duplex auto\n speed auto\n!\ninterface Serial0/1\n no ip address\n shutdown\n clock rate 2000000\n!\nip forward-protocol nd\n!\n!\nno ip http server\nno ip http secure-server\n!\nno cdp log mismatch duplex\n!\n!\n!\ncontrol-plane\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\nline con 0\n exec-timeout 0 0\n privilege level 15\n logging synchronous\nline aux 0\n exec-timeout 0 0\n privilege level 15\n logging synchronous\nline vty 0 3\n login local\n transport input ssh\nline vty 4\n password glitch12346\n login local\n transport input ssh\n!\n!\nend", 
+            "ansible_net_filesystems": [], 
+            "ansible_net_filesystems_info": {}, 
+            "ansible_net_gather_network_resources": [], 
+            "ansible_net_gather_subset": [
+                "hardware", 
+                "default", 
+                "interfaces", 
+                "config"
+            ], 
+            "ansible_net_hostname": "r1", 
+            "ansible_net_image": "tftp://255.255.255.255/unknown", 
+            "ansible_net_interfaces": {
+                "FastEthernet0/0": {
+                    "bandwidth": 10000, 
+                    "description": null, 
+                    "duplex": null, 
+                    "ipv4": [
+                        {
+                            "address": "192.168.56.11", 
+                            "subnet": "24"
+                        }
+                    ], 
+                    "lineprotocol": "up", 
+                    "macaddress": "c201.33dd.0000", 
+                    "mediatype": null, 
+                    "mtu": 1500, 
+                    "operstatus": "up", 
+                    "type": "Gt96k FE"
+                }, 
+                "FastEthernet0/1": {
+                    "bandwidth": 10000, 
+                    "description": null, 
+                    "duplex": null, 
+                    "ipv4": [], 
+                    "lineprotocol": "down", 
+                    "macaddress": "c201.33dd.0001", 
+                    "mediatype": null, 
+                    "mtu": 1500, 
+                    "operstatus": "administratively down", 
+                    "type": "Gt96k FE"
+                }, 
+                "Serial0/0": {
+                    "bandwidth": 1544, 
+                    "description": null, 
+                    "duplex": null, 
+                    "ipv4": [], 
+                    "lineprotocol": "down", 
+                    "macaddress": null, 
+                    "mediatype": null, 
+                    "mtu": 1500, 
+                    "operstatus": "administratively down", 
+                    "type": null
+                }, 
+                "Serial0/1": {
+                    "bandwidth": 1544, 
+                    "description": null, 
+                    "duplex": null, 
+                    "ipv4": [], 
+                    "lineprotocol": "down", 
+                    "macaddress": null, 
+                    "mediatype": null, 
+                    "mtu": 1500, 
+                    "operstatus": "administratively down", 
+                    "type": null
+                }
+            }, 
+            "ansible_net_iostype": "IOS", 
+            "ansible_net_memfree_mb": 29060.1171875, 
+            "ansible_net_memtotal_mb": 45005.8125, 
+            "ansible_net_model": "3725", 
+            "ansible_net_neighbors": {}, 
+            "ansible_net_python_version": "2.7.17", 
+            "ansible_net_serialnum": "FTX0945W0MY", 
+            "ansible_net_system": "ios", 
+            "ansible_net_version": "12.4(25d)", 
+            "ansible_network_resources": {}
+        }, 
+        "changed": false, 
+        "failed": false, 
+        "warnings": [
+            "default value for `gather_subset` will be changed to `min` from `!config` v2.11 onwards"
+        ]
+    }
+}

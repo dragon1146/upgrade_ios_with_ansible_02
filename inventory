@@ -1,0 +1,22 @@
+[ios-devices]
+r1 ansible_host=192.168.56.11
+r2 ansible_host=192.168.56.12
+
+[ios-devices:vars]
+ansible_network_os=ios
+
+##################
+##################
+
+[nx-os-devices]
+nex1
+nex2
+nex3
+
+[nx-os-devices:vars]
+os=nxos
+
+##################
+##################
+
+
