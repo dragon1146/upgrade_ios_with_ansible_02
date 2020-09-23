@@ -8,16 +8,16 @@
     tasks:
 
       - name: Task 1 - use nx-os module to gather facts
-        nxos_facts:
+        setup:
           gather_subset: min
-          provider:
-            username: admin
-            password: admin
-            host: "{{ inventory_hostname }}"
-#            auth_pass: cisco12345
-#            authorize: yes
-            timeout: 60
-            transport: cli
+#           provider:
+#             username: admin
+#             password: admin
+#             host: "{{ inventory_hostname }}"
+# #            auth_pass: cisco12345
+# #            authorize: yes
+#             timeout: 60
+#             transport: cli
         register: results1
 
 

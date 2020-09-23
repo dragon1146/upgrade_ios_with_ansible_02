@@ -1,0 +1,32 @@
+{
+    "ansible_facts": {
+        "ansible_net_api": "cliconf", 
+        "ansible_net_gather_network_resources": [], 
+        "ansible_net_gather_subset": [
+            "default"
+        ], 
+        "ansible_net_hostname": "nex1", 
+        "ansible_net_image": "bootflash:///titanium-d1.7.3.0.D1.1.bin", 
+        "ansible_net_license_hostid": "TB1E9A8500B", 
+        "ansible_net_model": "NX-OSv Chassis (\"NX-OSv Supervisor Module\")", 
+        "ansible_net_platform": "N7K-C7018", 
+        "ansible_net_python_version": "2.7.17", 
+        "ansible_net_serialnum": "TM1E9A8500B", 
+        "ansible_net_system": "nxos", 
+        "ansible_net_version": "7.3(0)D1(1)", 
+        "ansible_network_resources": {}, 
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "deprecations": [
+        {
+            "msg": "Distribution Ubuntu 18.04 on host nex1 should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for more information", 
+            "version": "2.12"
+        }
+    ], 
+    "failed": false, 
+    "warnings": [
+        "default value for `gather_subset` will be changed to `min` from `!config` v2.11 onwards"
+    ]
+}
+}
